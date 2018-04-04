@@ -1,0 +1,32 @@
+/*
+	Jake Bedard
+	818121974
+	CS545
+*/
+$(document).ready(function() {
+	$('#same_as_billing').on("change",function(){
+		if(this.checked){
+		  $("[name='xfname']").val($("[name='fname']").val());
+		  $("[name='xlname']").val($("[name='lname']").val());
+		  $("[name='xaddress1']").val($("[name='address1']").val());
+		  $("[name='xaddress2']").val($("[name='address2']").val());
+		  $("[name='xcity']").val($("[name='city']").val());
+		  $("[name='xstate']").val($("[name='state']").val());
+		  $("[name='xzip']").val($("[name='zip']").val());
+		  $("[name='xphone1']").val($("[name='phone1']").val());
+		  $("[name='xphone2']").val($("[name='phone2']").val());
+		  $("[name='xphone3']").val($("[name='phone3']").val());
+		}else{
+		  $("[name='xfname']").val("");
+		  $("[name='xlname']").val("");
+		  $("[name='xaddress1']").val("");
+		  $("[name='xaddress2']").val("");
+		  $("[name='xcity']").val("");
+		  $("[name='xstate']").val("");
+		  $("[name='xzip']").val("");
+		  $("[name='xphone1']").val("");
+		  $("[name='xphone2']").val("");
+		  $("[name='xphone3']").val("");			
+		}
+	});
+});

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bertha's Deluxe Chocolates</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="images/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="/jquery/jquery.js"></script>
+	<script src="js/shopping_cart.js"></script>
+    <script src="js/get_products_ajax.js"></script>
+	<script src="js/cart"></script>
+	<script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+	<script src="js/modal_product.js"></script>
+
+</head>
+<!-- Jake Bedard -->
+<!-- jadrn007 -->
+<!-- Red ID 818121974 -->
+<body>	
+	<nav class="navbar navbar-default navbar-dark">
+<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Bertha's Deluxe Chocolates</a>
+		</div>
+		<div id='cart-ui'>
+			<h5 id="counter">
+			</h5>
+			<i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+			<a class="btn btn-secondary btn-sm" href="checkout.html">Check out</a>
+		</div>	
+</div>
+	</nav> 
+
+	<div class=container-fluid>
+		<div class="row">
+			<!-- Sidebar -->
+				<nav class="col-lg-2 col-md-2 d-sm-block bg-light sidebar">
+				<h5 class="top-link"><a class="sdbr-link" href="index.html">Home</a></h5>
+				<h5 class=""><a id="about" class="sdbr-link" href="#">About Us</a></h5>
+				<h5 class=""><a id="contact" class="sdbr-link" href="#">Contact Us</a></h5>
+				<h5 class="sdbr-link">Product Categories:</h5>
+				  <ul id=sdbr class="nav flex-column">
+				    <li class="nav-item">
+				      <a id="dark" class="nav-link dark" href="#">Dark Chocolate</a>
+				    </li>
+				    <li class="nav-item milk">
+				      <a id="milk" class="nav-link" href="#">Milk Chocolate</a>
+				    </li>
+				    <li class="nav-item">
+				      <a id="brittles" class="nav-link" href="#">Brittles and Toffees</a>
+				    </li>
+				    <li class="nav-item">
+				      <a id="truffles" class="nav-link" href="#">Truffles</a>
+				    </li>
+				    <li class="nav-item">
+				      <a id="nuts" class="nav-link" href="#">Nuts and Chews</a>
+				    </li>
+				    <li class="nav-item">
+				      <a id="holiday" class="nav-link holiday" href="#">Holiday Assortments</a>
+				    </li>
+				    <li class="nav-item">
+				      <a id="gifts" class="nav-link gifts" href="#">Gifts</a>
+				    </li>
+				  </ul>
+		    	</nav><!-- end sidebar-wrapper -->
+        	
+        		<div id="mn" class="col-sm-10 ml-sm-auto col-md-10">
+        			<div class="jumbotron">
+						<h1 id="main" class="display-3">The best chocolate you will ever eat</h1>
+						<p id=main2 class="lead">Try our world famous dark chocolate. You'll love it!</p>
+					</div>
+				<div id="srv-cont" class="container-fluid">
+					<div class="row">
+						<div class="feature col-lg-4 col-md-4 col-sm-12 gifts">
+							<img src="images/gift.jpg" alt="">
+							<h2>Gifts</h2>
+							<p>We've prepared some amazing gift sets this holiday. Come check them out!</p>
+						</div>
+						<div class="feature col-lg-4 col-md-4 col-sm-12 milk">
+							<img src="images/milk-chocolate.jpg" alt="">
+							<h2>Milk Chocolates</h2>
+							<p>Nothing is wrong with a little sweet tooth! Try our milk chocolates today.</p>
+						</div>
+						<div class="feature col-lg-4 col-md-4 col-sm-12 dark">
+							<img src="images/darkchoco.jpg" alt="">
+							<h2>Dark Chocolates</h2>
+							<p>It's what we're famous for. No box of chocolates is complete without some of our famous darks!</p>
+						</div>
+					</div> <!-- end 4 col row -->
+				</div> <!-- end nested container -->
+				</div> <!-- end mn -->
+			</div> <!-- end row -->
+		</div> <!-- end container -->
+	<footer></footer>
+<!-- MODAL -->
+<!-- Large modal -->
+    <div class="ui-widget">
+        <!-- <input type="button" id="open" name="open_dialog" value="Open Dialog" /> -->
+        <div id="ui-dialog" title="Product Details">
+            <div class="ui-dialog-content">
+                This is a modal dialog box.  You can put as much or as little
+                content in the dialog box as you wish.          
+            </div> <!-- end ui-dialog-content -->
+        </div> <!-- end ui-dialog -->     
+    </div>  <!-- end ui-widget -->
+<!-- END MODAL -->
+</body>
+</html>

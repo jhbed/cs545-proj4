@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bertha's Deluxe Chocolates</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="images/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="/jquery/jquery.js"></script>
+	<script src="js/shopping_cart.js"></script>
+   	<script src="js/get_products_ajax.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/populate_checkout.js"></script>
+	<script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="js/form_val.js"></script>
+	<script src="js/val.js"></script>
+	
+</head>
+<!-- Jake Bedard -->
+<!-- jadrn007 -->
+<!-- Red ID 818121974 -->
+<body>
+
+	<nav class="navbar navbar-dark">
+		<a class="navbar-brand" href="index.html">Bertha's Deluxe Chocolates</a>
+		<div id='cart-ui'>
+			<h5 id="counter">
+			</h5>
+			<i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+			<a class="btn btn-secondary btn-sm" href="checkout.html">Check out</a>
+		</div>	
+	</nav> 
+	
+	<div class=container>
+		<h1>Checkout Form</h1>
+		<div id="order-form">
+		</div>
+	</div>
+<!-- Large modal -->
+    <div class="ui-widget">
+        <!-- <input type="button" id="open" name="open_dialog" value="Open Dialog" /> -->
+        <div id="ui-dialog" title="Please enter your checkout information">
+            <div class="ui-dialog-content">
+				<h2>Billing Information and Address</h2>
+				<div id="billing">
+				
+<!-- START FORM************************************* -->
+				<form action="" method="post" name="signup-form" enctype="multipart/form-data">
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label for="fname">First Name</label>
+									<input type="text" id="fname" class="form-control form-control-sm" name="fname">
+								</div>
+
+								<div class="form-group col-md-4">
+									<label for="lname">Last Name</label>
+									<input type="text" id="lname" class="form-control form-control-sm" name="lname">
+								</div>
+
+							</div>
+
+							<div class="form-group">
+								<label for="address">Address</label>
+								<input type="text" id="address" class="form-control form-control-sm" placeholder="Enter your address and street here" name="address1">
+							</div>
+							<div class="form-group">
+								<label for="address2">Address 2 (Optional)</label>
+								<input type="text" id="address2" class="form-control form-control-sm" placeholder="Apartment #, floor, etc." name="address2">
+							</div>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="city">City</label>
+									<input type="text" id="city" class="form-control form-control-sm" name="city">
+								</div>
+								<div class="form-group col-md-2">
+									<label for="state">State</label>
+									<input type="text" id="state" class="form-control form-control-sm" placeholder="CA" name="state" maxlength="2">
+								</div>
+								<div class="form-group col-md-4">
+									<label for="zip">Zip Code</label>
+									<input type="text" id="zip" class="form-control form-control-sm" name="zip" maxlength="5">
+								</div>
+							</div>
+							<!--phone -->
+							<div id="phone-email-labels" class="form-row">
+								<div class="form-group col-md-4">
+									<label for="phone1">Phone Number</label>
+								</div>
+								<div class="form-group col-md-8">
+					
+								</div>
+							</div>
+							<div id="phone-email" class="form-row">
+				
+				
+								<div class="form-group col-md-1">
+									<input type="text" id="phone1" class="form-control form-control-sm text-center" placeholder="(999)" name="phone1" maxlength="3">
+								</div>
+				
+								<div class="form-group col-md-1">
+									<input type="text" id="phone2" class="form-control form-control-sm text-center" placeholder="999" name="phone2" maxlength="3">
+								</div>
+				
+								<div class="form-group col-md-2">
+									<input type="text" id="phone3" class="form-control form-control-sm text-center" placeholder="9999" name="phone3" maxlength="4">
+								</div>
+
+								<div class="col-md-8">
+					
+								</div>
+				
+							</div>
+			
+				</form>
+				</div>
+				
+<!-- ****************************************START SHIPPING FORM -->
+				<h2>Shipping Information and Address</h2>
+
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" name="same" id="same_as_billing" value="same"> Same as Billing Information
+					</label>
+				</div>
+
+				<div id="shipping">
+						<form id="signup-form" action="/perl/jadrn007/proj4/confirmation.cgi" method="post" name="signup-form" enctype="multipart/form-data">
+									<div class="form-row">
+										<div class="form-group col-md-4">
+											<label for="fname">First Name</label>
+											<input type="text" id="fname" class="form-control form-control-sm" name="xfname">
+										</div>
+
+										<div class="form-group col-md-4">
+											<label for="lname">Last Name</label>
+											<input type="text" id="lname" class="form-control form-control-sm" name="xlname">
+										</div>
+
+									</div>
+
+									<div class="form-group">
+										<label for="address">Address</label>
+										<input type="text" id="address" class="form-control form-control-sm" placeholder="Enter your address and street here" name="xaddress1">
+									</div>
+									<div class="form-group">
+										<label for="address2">Address 2 (Optional)</label>
+										<input type="text" id="address2" class="form-control form-control-sm" placeholder="Apartment #, floor, etc." name="xaddress2">
+									</div>
+
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="city">City</label>
+											<input type="text" id="city" class="form-control form-control-sm" name="xcity">
+										</div>
+										<div class="form-group col-md-2">
+											<label for="state">State</label>
+											<input type="text" id="state" class="form-control form-control-sm" placeholder="CA" name="xstate" maxlength="2">
+										</div>
+										<div class="form-group col-md-4">
+											<label for="zip">Zip Code</label>
+											<input type="text" id="zip" class="form-control form-control-sm" name="xzip" maxlength="5">
+										</div>
+									</div>
+									<!--phone -->
+									<div id="phone-email-labels" class="form-row">
+										<div class="form-group col-md-4">
+											<label for="phone1">Phone Number</label>
+										</div>
+										<div class="form-group col-md-8">
+					
+										</div>
+									</div>
+									<div id="phone-email" class="form-row">
+				
+				
+										<div class="form-group col-md-1">
+											<input type="text" id="phone1" class="form-control form-control-sm text-center" placeholder="(999)" name="xphone1" maxlength="3">
+										</div>
+				
+										<div class="form-group col-md-1">
+											<input type="text" id="phone2" class="form-control form-control-sm text-center" placeholder="999" name="xphone2" maxlength="3">
+										</div>
+				
+										<div class="form-group col-md-2">
+											<input type="text" id="phone3" class="form-control form-control-sm text-center" placeholder="9999" name="xphone3" maxlength="4">
+										</div>
+
+										<div class="col-md-8">
+					
+										</div>
+				
+									</div>
+
+									<div class="form-group">
+
+										<label class="radio-title">Payment Type</label>
+
+										<div class="form-check form-check-inline">
+											<label class="form-check-label">
+												<input class="form-check-input" name="pmt-type" type="radio" id="age-category1" value="Teen"> Visa
+											</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<label class="form-check-label">
+												<input class="form-check-input" name="pmt-type" type="radio" id="age-category2" value="Adult"> Mastercard
+											</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<label class="form-check-label">
+												<input class="form-check-input" name="pmt-type" type="radio" id="age-category3" value="Senior"> Discover
+											</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<label class="form-check-label">
+												<input class="form-check-input" name="pmt-type" type="radio" id="age-category3" value="Senior"> American Express
+											</label>
+										</div>
+					
+									</div>
+									<div id="phone-email" class="form-row">
+				
+										
+										<div class="form-group col col-md-4">
+											<label for="card">16 Digit Card Number</label>
+											<input name="card" type="text" id="phone1" class="form-control form-control-sm text-center" placeholder="16 Digit Card #" maxlength="16">
+										</div>
+										
+
+										<div class="col-md-6">
+					
+										</div>
+				
+									</div>
+									<div class="form-row">
+										
+										<div class="form-group col col-md-2">
+											<label for="exp">Expiration Date</label>
+											<input name="exp" type="text" id="phone1" class="form-control form-control-sm text-center" placeholder="Ex: 01/2019" maxlength="7">
+										</div>
+									</div>
+									<div class="form-row">
+										 <input id="form-tot" type="hidden" name="total" value="0.00">
+									</div>
+			<p id="error">&nbsp;</p>						
+			<div class="text-center submit">
+				<input type="submit" id="submit-button" class="btn btn-lg btn-success" value="Submit">
+			</div>
+
+			
+						</form>
+<!-- END FORM************************************* -->
+						</div>
+        
+            </div> <!-- end ui-dialog-content -->
+        </div> <!-- end ui-dialog -->     
+    </div>  <!-- end ui-widget -->
+<!-- END MODAL -->
+	
+</body>
+</html>

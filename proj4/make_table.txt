@@ -1,0 +1,12 @@
+use jadrn007;
+
+drop table if exists orders;
+
+create table orders(
+    date DATE,
+    sku char(9) NOT NULL,
+    qty int(3) NOT NULL
+); 
+    
+
+
